@@ -5,8 +5,8 @@ from pubnub.callbacks import SubscribeCallback
 
 
 pnconfig = PNConfiguration()
-pnconfig.subscribe_key = 'sub-c-2d2de682-b0a1-11e8-bf00-aaab7b0b8683'
-pnconfig.publish_key = 'pub-c-55664c77-0d80-4e16-b2d8-0f3a0b0a4079'
+pnconfig.subscribe_key = 'sub-c-ec257da0-b468-11e8-bfaa-a64428e1f03d'
+pnconfig.publish_key = 'pub-c-7e20d64c-a4f3-4e74-a0f0-09d0e3d2e213'
 pnconfig.ssl = False
  
 pubnub = PubNub(pnconfig)
