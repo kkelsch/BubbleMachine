@@ -8,20 +8,21 @@ from pubnub.callbacks import SubscribeCallback
 import RPi.GPIO as GPIO
 import time 
 PinNum = 4
+seconds_run = 5
 GPIO.setmode(GPIO.BCM)   #use BCM pin numbering
 GPIO.setup(PinNum, GPIO.OUT)
 
-print('testing...')
+print('Testing Machine...')
 GPIO.output(PinNum,GPIO.HIGH)
-time.sleep(5)
+time.sleep(seconds_run)
 GPIO.output(PinNum,GPIO.LOW)
 print('done')
 
 
 # Pubnub config
 pnconfig = PNConfiguration()
-pnconfig.subscribe_key = 'sub-c-ec257da0-b468-11e8-bfaa-a64428e1f03d'
-pnconfig.publish_key = 'pub-c-7e20d64c-a4f3-4e74-a0f0-09d0e3d2e213'
+pnconfig.subscribe_key = '<secret>'
+pnconfig.publish_key = '<secret>'
 pnconfig.ssl = False
  
 pubnub = PubNub(pnconfig)
@@ -39,6 +40,9 @@ class MyListener(SubscribeCallback):
  
     def message(self, pubnub, response):
         print(response.message)
+        GPIO.output(PinNum,GPIO.HIGH)
+        time.sleep(seconds_run)
+        GPIO.output(PinNum,GPIO.LOW)
  
     def presence(self, pubnub, presence):
         pass
