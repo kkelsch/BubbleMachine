@@ -20,8 +20,8 @@ print('done')
 
 # Pubnub config
 pnconfig = PNConfiguration()
-pnconfig.subscribe_key = 'sub-c-ec257da0-b468-11e8-bfaa-a64428e1f03d'
-pnconfig.publish_key = 'pub-c-7e20d64c-a4f3-4e74-a0f0-09d0e3d2e213'
+pnconfig.subscribe_key = '<secret>'
+pnconfig.publish_key = '<secret>'
 pnconfig.ssl = False
  
 pubnub = PubNub(pnconfig)
