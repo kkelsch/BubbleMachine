@@ -2,6 +2,14 @@ extends layout
 
 block content
   h1= title
+  script(src='/javascripts/jquery.min.js')
   p Welcome to #{title}
-  button.button.hypeButton.button-3d.button-caution.button-circle.button-jumbo Engage
+  button#BubbleButton.button.hypeButton.button-3d.button-caution.button-circle.button-jumbo(onclick = 'onButtonClick()') Engage
+  script.
+    function onButtonClick(){
+    $.ajax({
+        "url": "/sendMessage",
+        "method": "POST"
+      }); 
+    }
   
