@@ -398,7 +398,7 @@
     .button-circle.button-jumbo,
     .button-box.button-jumbo,
     .button-square.button-jumbo {
-      width: 110px; }
+      width: 300px; }
     .button-circle.button-large,
     .button-box.button-large,
     .button-square.button-large {
@@ -1515,12 +1515,19 @@
     padding: 0 70px; }
   
   .button-jumbo {
-    font-size: 24px;
-    height: 110px;
-    line-height: 110px;
-    padding: 0 110px; 
-    left:50%}
-  
+    font-size: 48px;
+    height: 300px;
+    line-height: 300px;
+    padding: 0 300px; 
+  }
+  /* .centered {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    
+    transform: translate(-50%, -50%);
+  }
+   */
   .button-large {
     font-size: 20px;
     height: 50px;
