@@ -8,8 +8,8 @@ function buttonClick(){
 }
 
 // SUPER SECRET SHIT
-var pubKey = 'pub-c-1b8f92cc-6dbb-47f0-b329-bcf297c85cda';
-var subKey = 'sub-c-b15b8210-bea3-11e8-8fd2-4a2bdf4876be';
+var pubKey = '<secret>';
+var subKey = '<secret>';
 var channelName = 'Bubble-Channel'; 
 
 var pubnub = new PubNub({
