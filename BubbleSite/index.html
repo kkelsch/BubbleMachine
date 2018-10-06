@@ -2,14 +2,22 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
     <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
     <div class="center">
-        
-        <div class="select-button">
+    <div id ="bubblebutton" class="select-button" onclick="onButtonClick()">
         </div>
     </div>
 </body>
 </html>
 
+<script>
+function onButtonClick(){
+    $.ajax({
+        "url": "http://localhost:8080/sendMessage",
+        "method": "GET"
+      }); 
+    }
+</script>
