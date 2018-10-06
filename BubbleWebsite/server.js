@@ -22,25 +22,25 @@ console.log('hello from server');
 });
 
 // call from front end
-app.get('/sendMessage', function(req, res) {
+app.post('/sendMessage', function(req, res) {
     publishMessage(); 
 });
 
 // Publish Message
 function publishMessage() {
     console.log("Sending message....");
+    var currentTime = new Date();
     var publishConfig = {
         channel : channelName,
         message : {
             title: "Hype Message",
-            description: "ENGAGE HYPE"
+            description: "ENGAGE HYPE:" + currentTime.toLocaleTimeString()
         }
     };
     pubnub.publish(publishConfig, function(status, response) {
         console.log(status, response);
         
     });
-
 };
 
 

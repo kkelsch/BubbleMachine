@@ -28,14 +28,15 @@
     <script src="./js/bootstrap.min.js"></script>
     <script>
         function onButtonClick(){
+            alert('TIME TO HYPE!');
             $.ajax({
                 "url": "/sendMessage",
-                "method": "GET"
+                "method": "POST"
               }); 
-            
-            alert('HYPE SENT!');
+           
         };
-        </script>
+       
+       </script>
 </body>
 
 </html>
