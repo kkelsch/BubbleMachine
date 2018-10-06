@@ -1,12 +1,13 @@
 {
-    "name": "app-service-hello-world",
-    "description": "Simple Hello World Node.js sample for Azure App Service",
+    "name": "bubble-site",
+    "description": "",
     "version": "0.0.1",
     "private": true,
     "license": "MIT",
-    "author": "Microsoft",
+    "author": "Kat",
     "engines": {
-        "node": ">=6.9.1"
+        "node": ">=6.9.1",
+        "express": "~4.16.0"
     },
     "scripts": {
         "start": "node index.js"
